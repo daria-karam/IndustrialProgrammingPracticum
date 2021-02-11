@@ -261,39 +261,28 @@ int main()
 
 	//Выравнивание границ результирующей матрицы
 
-	int flag = 0, resultRows = 100, resultColumns = 100;
+	int flagRows = 0, flagColumns = 0, resultRows = 100, resultColumns = 100;
 	for (int i = 0; i < currentSize; i++)
 	{
-		flag = 0;
+		flagRows = 0;
+		flagColumns = 0;
 		for (int j = 0; j < currentSize; j++)
 		{
 			if (resultMatrix.myMatrix[i][j] != 0)
 			{
-				flag++;
+				flagRows++;
 				resultRows = 100;
 			}
-		}
-		if (flag == 0 && i < resultRows)
-		{
-			resultRows = i;
-		}
-	}
-
-	for (int i = 0; i < currentSize; i++)
-	{
-		flag = 0;
-		for (int j = 0; j < currentSize; j++)
-		{
 			if (resultMatrix.myMatrix[j][i] != 0)
 			{
-				flag++;
+				flagColumns++;
 				resultColumns = 100;
 			}
 		}
-		if (flag == 0 && i < resultColumns)
-		{
+		if (flagRows == 0 && i < resultRows)
+			resultRows = i;
+		if (flagColumns == 0 && i < resultColumns)
 			resultColumns = i;
-		}
 	}
 
 	resultMatrix.resizeMatrix(resultRows, resultColumns);
