@@ -1,7 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
 
 class Matrix
 {
@@ -14,7 +17,7 @@ public:
 	{
 		rows = 1;
 		columns = 1;
-		myMatrix = new int* [rows];
+		myMatrix = new int*[rows];
 		for (int i = 0; i < rows; i++)
 		{
 			myMatrix[i] = new int[columns];
@@ -27,7 +30,7 @@ public:
 	{
 		rows = _rows;
 		columns = _columns;
-		myMatrix = new int* [rows];
+		myMatrix = new int*[rows];
 		for (int i = 0; i < rows; i++)
 			myMatrix[i] = new int[columns];
 	}
@@ -55,7 +58,7 @@ public:
 
 	void resizeMatrix(int _rows, int _columns)
 	{
-		int** newMatrix = new int* [_rows];
+		int** newMatrix = new int*[_rows];
 		for (int i = 0; i < _rows; i++)
 			newMatrix[i] = new int[_columns];
 		for (int i = 0; i < _rows; i++)
@@ -64,7 +67,7 @@ public:
 					newMatrix[i][j] = myMatrix[i][j];
 				else
 					newMatrix[i][j] = 0;
-		
+
 		for (int i = 0; i < rows; i++)
 			delete[] myMatrix[i];
 		delete[] myMatrix;
@@ -197,22 +200,22 @@ int main()
 				intermediateMatrix[0].myMatrix[i][j] += (partsOfFirstMatrix[0].myMatrix[i][z] + partsOfFirstMatrix[3].myMatrix[i][z])
 					* (partsOfSecondMatrix[0].myMatrix[z][j] + partsOfSecondMatrix[3].myMatrix[z][j]);
 
-					intermediateMatrix[1].myMatrix[i][j] += (partsOfFirstMatrix[2].myMatrix[i][z] + partsOfFirstMatrix[3].myMatrix[i][z])
+				intermediateMatrix[1].myMatrix[i][j] += (partsOfFirstMatrix[2].myMatrix[i][z] + partsOfFirstMatrix[3].myMatrix[i][z])
 					* partsOfSecondMatrix[0].myMatrix[z][j];
 
-					intermediateMatrix[2].myMatrix[i][j] += partsOfFirstMatrix[0].myMatrix[i][z]
+				intermediateMatrix[2].myMatrix[i][j] += partsOfFirstMatrix[0].myMatrix[i][z]
 					* (partsOfSecondMatrix[1].myMatrix[z][j] - partsOfSecondMatrix[3].myMatrix[z][j]);
 
-					intermediateMatrix[3].myMatrix[i][j] += partsOfFirstMatrix[3].myMatrix[i][z]
+				intermediateMatrix[3].myMatrix[i][j] += partsOfFirstMatrix[3].myMatrix[i][z]
 					* (partsOfSecondMatrix[2].myMatrix[z][j] - partsOfSecondMatrix[0].myMatrix[z][j]);
 
-					intermediateMatrix[4].myMatrix[i][j] += (partsOfFirstMatrix[0].myMatrix[i][z] + partsOfFirstMatrix[1].myMatrix[i][z])
+				intermediateMatrix[4].myMatrix[i][j] += (partsOfFirstMatrix[0].myMatrix[i][z] + partsOfFirstMatrix[1].myMatrix[i][z])
 					* partsOfSecondMatrix[3].myMatrix[z][j];
 
-					intermediateMatrix[5].myMatrix[i][j] += (partsOfFirstMatrix[2].myMatrix[i][z] - partsOfFirstMatrix[0].myMatrix[i][z])
+				intermediateMatrix[5].myMatrix[i][j] += (partsOfFirstMatrix[2].myMatrix[i][z] - partsOfFirstMatrix[0].myMatrix[i][z])
 					* (partsOfSecondMatrix[0].myMatrix[z][j] + partsOfSecondMatrix[1].myMatrix[z][j]);
 
-					intermediateMatrix[6].myMatrix[i][j] += (partsOfFirstMatrix[1].myMatrix[i][z] - partsOfFirstMatrix[3].myMatrix[i][z])
+				intermediateMatrix[6].myMatrix[i][j] += (partsOfFirstMatrix[1].myMatrix[i][z] - partsOfFirstMatrix[3].myMatrix[i][z])
 					* (partsOfSecondMatrix[2].myMatrix[z][j] + partsOfSecondMatrix[3].myMatrix[z][j]);
 			}
 		}
@@ -231,11 +234,11 @@ int main()
 		for (int j = 0; j < currentSize / 2; j++)
 		{
 			auxiliaryMatrix[0].myMatrix[i][j] = intermediateMatrix[0].myMatrix[i][j] + intermediateMatrix[3].myMatrix[i][j]
-													- intermediateMatrix[4].myMatrix[i][j] + intermediateMatrix[6].myMatrix[i][j];
+				- intermediateMatrix[4].myMatrix[i][j] + intermediateMatrix[6].myMatrix[i][j];
 			auxiliaryMatrix[1].myMatrix[i][j] = intermediateMatrix[2].myMatrix[i][j] + intermediateMatrix[4].myMatrix[i][j];
 			auxiliaryMatrix[2].myMatrix[i][j] = intermediateMatrix[1].myMatrix[i][j] + intermediateMatrix[3].myMatrix[i][j];
 			auxiliaryMatrix[3].myMatrix[i][j] = intermediateMatrix[0].myMatrix[i][j] - intermediateMatrix[1].myMatrix[i][j]
-													+ intermediateMatrix[2].myMatrix[i][j] + intermediateMatrix[5].myMatrix[i][j];
+				+ intermediateMatrix[2].myMatrix[i][j] + intermediateMatrix[5].myMatrix[i][j];
 		}
 	}
 
