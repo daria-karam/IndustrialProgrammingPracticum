@@ -98,7 +98,7 @@ void getSize(int& rows, int& columns, string message)
 {
 	do
 	{
-		cout << "Ââåäèòå ðàçìåðû " << message << " ìàòðèöû\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ " << message << " Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹\n";
 		cin >> rows >> columns;
 	} while (rows <= 0 || columns <= 0);
 }
@@ -108,21 +108,21 @@ int main()
 	srand(time(NULL));
 	int rows, columns, choice, currentSize = 2;
 	system("chcp 1251");
-	cout << "Âàñ ïðèâåòñòâóåò ïðîãðàììà" << endl << "áûñòðîãî ïåðåìíîæåíèÿ ìàòðèö ìåòîäîì Øòðàññåíà\n\n";
+	cout << "Ð’Ð°Ñ Ð¿Ñ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°" << endl << "Ð±Ñ‹ÑÑ‚Ñ€Ð¾Ð³Ð¾ Ð¿ÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð¼ Ð¨Ñ‚Ñ€Ð°ÑÑÐµÐ½Ð°\n\n";
 
-	//Ââîä ðàçìåðîâ ìàòðèöû ïîëüçîâàòåëåì
+	//Ð’Ð²Ð¾Ð´ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð¾Ð² Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¼
 
-	getSize(rows, columns, "ïåðâîé");
+	getSize(rows, columns, "Ð¿ÐµÑ€Ð²Ð¾Ð¹");
 	Matrix firstMatrix(rows, columns);
-	getSize(rows, columns, "âòîðîé");
+	getSize(rows, columns, "Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹");
 	Matrix secondMatrix(rows, columns);
 
-	//Âûáîð ñïîñîáà çàïîëíåíèÿ è çàïîëíåíèå ìàòðèö
+	//Ð’Ñ‹Ð±Ð¾Ñ€ ÑÐ¿Ð¾ÑÐ¾Ð±Ð° Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¸ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†
 
 	do
 	{
-		cout << "Âûáåðèòå ñïîñîá çàïîëíåíèÿ ìàòðèö\n" <<
-			"1 - Âðó÷íóþ \n2 - Ñëó÷àéíûì îáðàçîì\n";
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÑÐ¿Ð¾ÑÐ¾Ð± Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†\n" <<
+			"1 - Ð’Ñ€ÑƒÑ‡Ð½ÑƒÑŽ \n2 - Ð¡Ð»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¼ Ð¾Ð±Ñ€Ð°Ð·Ð¾Ð¼\n";
 		cin >> choice;
 	} while (choice < 1 || choice > 2);
 	switch (choice)
@@ -132,35 +132,35 @@ int main()
 		firstMatrix.keyboardInit();
 		cout << endl;
 		secondMatrix.keyboardInit();
-		cout << "\nÌàòðèöà 1\n\n";
+		cout << "\nÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 1\n\n";
 		firstMatrix.show();
-		cout << "\nÌàòðèöà 2\n\n";
+		cout << "\nÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 2\n\n";
 		secondMatrix.show();
 		break;
 	case 2:
 		firstMatrix.randomInit();
 		secondMatrix.randomInit();
-		cout << "\nÌàòðèöà 1\n\n";
+		cout << "\nÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 1\n\n";
 		firstMatrix.show();
-		cout << "\nÌàòðèöà 2\n\n";
+		cout << "\nÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 2\n\n";
 		secondMatrix.show();
 		break;
 	}
 
-	//Ïðèâåäåíèå ìàòðèö ê òðåáóåìîìó ðàçìåðó
+	//ÐŸÑ€Ð¸Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ðº Ñ‚Ñ€ÐµÐ±ÑƒÐµÐ¼Ð¾Ð¼Ñƒ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñƒ
 
 	while (currentSize < firstMatrix.rows || currentSize < secondMatrix.rows || currentSize < firstMatrix.columns || currentSize < secondMatrix.columns)
 		currentSize *= 2;
 	firstMatrix.resizeMatrix(currentSize, currentSize);
 	secondMatrix.resizeMatrix(currentSize, currentSize);
 
-	cout << "Ïðèâåäåííûå ìàòðèöû\n";
-	cout << "\nÌàòðèöà 1\n\n";
+	cout << "ÐŸÑ€Ð¸Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹\n";
+	cout << "\ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 1\n\n";
 	firstMatrix.show();
-	cout << "\nÌàòðèöà 2\n\n";
+	cout << "\ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° 2\n\n";
 	secondMatrix.show();
 
-	//Ðàçáèåíèå ìàòðèö íà ïîäìàòðèöû è èõ çàïîëíåíèå
+	//Ð Ð°Ð·Ð±Ð¸ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð½Ð° Ð¿Ð¾Ð´Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ Ð¸ Ð¸Ñ… Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ
 
 	Matrix* partsOfFirstMatrix = new Matrix[4];
 	for (int i = 0; i < 4; i++)
@@ -180,13 +180,13 @@ int main()
 	partsOfSecondMatrix[2].matrixByMatrixInit(secondMatrix.myMatrix, currentSize / 2, currentSize / 2, 0);
 	partsOfSecondMatrix[3].matrixByMatrixInit(secondMatrix.myMatrix, currentSize / 2, currentSize / 2, currentSize / 2);
 
-	//Ñîçäàíèå ïðîìåæóòî÷íûõ ìàòðèö
+	//Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚Ð¾Ñ‡Ð½Ñ‹Ñ… Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†
 
 	Matrix* intermediateMatrix = new Matrix[7];
 	for (int i = 0; i < 7; i++)
 		intermediateMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
-	//Âû÷èñëåíèå çíà÷åíèé ïðîìåæóòî÷íûõ ìàòðèö
+	//Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚Ð¾Ñ‡Ð½Ñ‹Ñ… Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†
 
 	for (int i = 0; i < currentSize / 2; i++)
 	{
@@ -221,13 +221,13 @@ int main()
 		}
 	}
 
-	//Ñîçäàíèå âñïîìîãàòåëüíûõ ìàòðèö
+	//Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð²ÑÐ¿Ð¾Ð¼Ð¾Ð³Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†
 
 	Matrix* auxiliaryMatrix = new Matrix[4];
 	for (int i = 0; i < 4; i++)
 		auxiliaryMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
-	//Ïîäñ÷åò çíà÷åíèé âñïîìîãàòåëüíûõ ìàòðèö èç ïðîìåæóòî÷íûõ
+	//ÐŸÐ¾Ð´ÑÑ‡ÐµÑ‚ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð²ÑÐ¿Ð¾Ð¼Ð¾Ð³Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð¸Ð· Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚Ð¾Ñ‡Ð½Ñ‹Ñ…
 
 	for (int i = 0; i < currentSize / 2; i++)
 	{
@@ -242,11 +242,11 @@ int main()
 		}
 	}
 
-	//Ñîçäàíèå ðåçóëüòèðóþùåé ìàòðèöû
+	//Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð¸Ñ€ÑƒÑŽÑ‰ÐµÐ¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹
 
 	Matrix resultMatrix(currentSize, currentSize);
 
-	//Çàíåñåíèå èíôîðìàöèè èç âñïîìîãàòåëüíûõ ìàòðèö â ðåçóëüòèðóþùóþ
+	//Ð—Ð°Ð½ÐµÑÐµÐ½Ð¸Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ Ð¸Ð· Ð²ÑÐ¿Ð¾Ð¼Ð¾Ð³Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð² Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð¸Ñ€ÑƒÑŽÑ‰ÑƒÑŽ
 
 	for (int i = 0; i < currentSize / 2; i++)
 	{
@@ -259,7 +259,7 @@ int main()
 		}
 	}
 
-	//Âûðàâíèâàíèå ãðàíèö ðåçóëüòèðóþùåé ìàòðèöû
+	//Ð’Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ðµ Ð³Ñ€Ð°Ð½Ð¸Ñ† Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð¸Ñ€ÑƒÑŽÑ‰ÐµÐ¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹
 
 	int flag = 0, resultRows = 100, resultColumns = 100;
 	for (int i = 0; i < currentSize; i++)
@@ -298,9 +298,9 @@ int main()
 
 	resultMatrix.resizeMatrix(resultRows, resultColumns);
 
-	//Âûâîä ðåçóëüòèðóþùåé ìàòðèöû
+	//Ð’Ñ‹Ð²Ð¾Ð´ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð¸Ñ€ÑƒÑŽÑ‰ÐµÐ¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹
 
-	cout << "\nÐåçóëüòèðóþùàÿ ìàòðèöà\n\n";
+	cout << "\nÐ ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð¸Ñ€ÑƒÑŽÑ‰Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°\n\n";
 	resultMatrix.show();
 
 	system("pause");
