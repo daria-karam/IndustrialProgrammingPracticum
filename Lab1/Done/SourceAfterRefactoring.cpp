@@ -162,7 +162,7 @@ int main()
 
 	//Разбиение матриц на подматрицы и их заполнение
 
-	Matrix* partsOfFirstMatrix = new Matrix[4];
+	Matrix partsOfFirstMatrix[4];
 	for (int i = 0; i < 4; i++)
 		partsOfFirstMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
@@ -171,7 +171,7 @@ int main()
 	partsOfFirstMatrix[2].matrixByMatrixInit(firstMatrix.myMatrix, currentSize / 2, currentSize / 2, 0);
 	partsOfFirstMatrix[3].matrixByMatrixInit(firstMatrix.myMatrix, currentSize / 2, currentSize / 2, currentSize / 2);
 
-	Matrix* partsOfSecondMatrix = new Matrix[4];
+	Matrix partsOfSecondMatrix[4];
 	for (int i = 0; i < 4; i++)
 		partsOfSecondMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
@@ -182,7 +182,7 @@ int main()
 
 	//Создание промежуточных матриц
 
-	Matrix* intermediateMatrix = new Matrix[7];
+	Matrix intermediateMatrix[7];
 	for (int i = 0; i < 7; i++)
 		intermediateMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
@@ -223,7 +223,7 @@ int main()
 
 	//Создание вспомогательных матриц
 
-	Matrix* auxiliaryMatrix = new Matrix[4];
+	Matrix auxiliaryMatrix[4];
 	for (int i = 0; i < 4; i++)
 		auxiliaryMatrix[i].resizeMatrix(currentSize / 2, currentSize / 2);
 
