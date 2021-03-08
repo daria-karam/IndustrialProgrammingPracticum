@@ -1,0 +1,12 @@
+H:\ПпПП\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.exe.config
+H:\ПпПП\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.exe
+H:\ПпПП\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.pdb
+H:\ПпПП\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.csprojAssemblyReference.cache
+H:\ПпПП\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.exe
+H:\ПпПП\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.pdb
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.exe.config
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.exe
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\bin\Debug\Lab2sharp.pdb
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.csproj.CoreCompileInputs.cache
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.exe
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab2sharp\Lab2sharp\obj\Debug\Lab2sharp.pdb
