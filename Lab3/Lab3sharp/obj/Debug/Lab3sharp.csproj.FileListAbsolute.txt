@@ -1,0 +1,7 @@
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\bin\Debug\Lab3sharp.exe.config
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\bin\Debug\Lab3sharp.exe
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\bin\Debug\Lab3sharp.pdb
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\obj\Debug\Lab3sharp.csprojAssemblyReference.cache
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\obj\Debug\Lab3sharp.csproj.CoreCompileInputs.cache
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\obj\Debug\Lab3sharp.exe
+C:\Users\Daria\Desktop\ПпПП\Лабораторные работы\Готовое\Lab3sharp\Lab3sharp\obj\Debug\Lab3sharp.pdb
